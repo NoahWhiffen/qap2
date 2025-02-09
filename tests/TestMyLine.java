@@ -67,6 +67,5 @@ public class TestMyLine {
         System.out.println("To String Method");
         System.out.println("----------------------------------------");
         System.out.println(line.toString());
-
     }
 }

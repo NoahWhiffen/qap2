@@ -34,7 +34,7 @@ public class MyLine {
         this.end = end;
     }
 
-    public int getBeginX() {
+    public double getBeginX() {
         return begin.getX();
     }
 
@@ -42,7 +42,7 @@ public class MyLine {
         begin.setX(x);
     }
 
-    public int getBeginY() {
+    public double getBeginY() {
         return begin.getY();
     }
 
@@ -50,7 +50,7 @@ public class MyLine {
         begin.setY(y);
     } 
 
-    public int getEndX() {
+    public double getEndX() {
         return end.getX();
     }
 
@@ -58,7 +58,7 @@ public class MyLine {
         end.setX(x);
     }
 
-    public int getEndY() {
+    public double getEndY() {
         return end.getY();
     }
 
@@ -66,16 +66,16 @@ public class MyLine {
         end.setY(y);
     }
 
-    public int[] getBeginXY() {
-        return new int[] {begin.getX(), begin.getY()};
+    public double[] getBeginXY() {
+        return new double[] {begin.getX(), begin.getY()};
     }
 
     public void setBeginXY(int x, int y) {
         begin.setXY(x, y);
     }
 
-    public int[] getEndXY() {
-        return new int[] {end.getX(), end.getY()};
+    public double[] getEndXY() {
+        return new double[] {end.getX(), end.getY()};
     }
 
     public void setEndXY(int x, int y) {
@@ -87,8 +87,8 @@ public class MyLine {
     }
 
     public double getGradient() {
-        int yDiff = end.getY() - begin.getY();
-        int xDiff = end.getX() - begin.getX();
+        double yDiff = end.getY() - begin.getY();
+        double xDiff = end.getX() - begin.getX();
 
         return Math.atan2(yDiff, xDiff);
     }
