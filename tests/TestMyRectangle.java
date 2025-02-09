@@ -1,8 +1,6 @@
 //      QAP2 - Java
 // Author: Noah Whiffen - SD12
-// Date: February 8th, 2025
-
-// Come back and add a length and width method to rectangle
+// Dates: February 8th, 2025 -February 9th, 2025
 
 package tests;
 
@@ -27,8 +25,10 @@ public class TestMyRectangle {
         System.out.println("Get point b: " + rectangle.getB());
         System.out.println("Get point c: " + rectangle.getC());
         System.out.println("Get point d: " + rectangle.getD());
+        System.out.println("Get length: " + rectangle.getLength());
+        System.out.println("Get width: " + rectangle.getWidth());
         System.out.println("Get perimeter: " + rectangle.getPerimeter());
-        // System.out.println("Get area: " + rectangle.getArea(length, width));
+        System.out.println("Get area: " + rectangle.getArea());
         System.out.println("----------------------------------------");
 
         // Test setters

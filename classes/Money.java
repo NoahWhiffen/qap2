@@ -7,7 +7,7 @@ package classes;
 public class Money {
   private long dollars;
   private long cents;
-  
+
   public Money(double amount) {
     this.dollars = (long) amount;
     this.cents = Math.round((amount - this.dollars) * 100);
@@ -18,15 +18,15 @@ public class Money {
     this.cents = otherObject.cents;
   }
 
-  public Money add(double amount, double otherAmount) {
-    double totalAmount = amount + otherAmount;
-    return new Money(totalAmount);
-  }
+  public Money add(Money otherObject) {
+    long totalCents = this.dollars * 100 + this.cents + otherObject.dollars * 100 + otherObject.cents;
+    return new Money(totalCents / 100.0);
+}
 
-  public Money subtract(double amount, double otherAmount) {
-    double totalAmount = amount - otherAmount;
-    return new Money(totalAmount);
-  }
+  public Money subtract(Money otherObject) {
+    long totalCents = this.dollars * 100 + this.cents - (otherObject.dollars * 100 + otherObject.cents);
+    return new Money(totalCents / 100.0);
+}
 
   public int compareTo(Money otherObject) {
     long totalCents = this.dollars * 100 + this.cents;
@@ -39,6 +39,6 @@ public class Money {
   }
 
   public String toString() {
-    return "$" + this.dollars + "." + this.cents;
+    return String.format("$%d.%02d", this.dollars, this.cents);
   }
 }
