@@ -1,6 +1,6 @@
 //      QAP2 - Java
 // Author: Noah Whiffen - SD12
-// Dates: February 8th, 2025 -February 9th, 2025
+// Dates: February 8th, 2025 - February 9th, 2025
 
 package tests;
 
